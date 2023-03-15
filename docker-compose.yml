@@ -1,8 +1,8 @@
-version: '3' 
+version: '3'
 
 services:
-    
-  web: 
+
+  web:
     build: ./docker-config/php
     volumes:
       - ./src/:/var/www/
@@ -32,7 +32,7 @@ services:
       MYSQL_USER: my_user
       MYSQL_PASSWORD: my_user
       TZ: 'Asia/Tokyo'
-      
+
     volumes:
       - ./docker-config/mysql/data:/var/lib/mysql
       - ./docker-config/mysql/my.cnf:/etc/mysql/conf.d/my.cnf
